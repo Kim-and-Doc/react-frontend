@@ -1471,6 +1471,7 @@
   max-width: 100%;
   min-width: 100%;
   background-color: #eeeded;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media screen and (max-width: 991px) {
