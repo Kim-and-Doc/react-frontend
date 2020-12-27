@@ -206,10 +206,11 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url("https://m.media-amazon.com/images/M/MV5BMWRkMjMxMjEtZTZiYi00OTIwLWFhNmMtOWFiZTU1NDc3OGJlXkEyXkFqcGdeQXVyMjIyNzU0OA@@._V1_.jpg");
-  background-position: 50% 0%;
-  background-size: cover;
-  background-repeat: repeat-x;
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/57/Calgary_banner_Panorama.jpg"); */
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: 50% 50%;
+  background-size: fill;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
@@ -874,7 +875,7 @@
 }
 
 .clear-button.post-interaction:hover {
-  color: #4715a3;
+  color: #13a2a7;
 }
 
 .post-settings {

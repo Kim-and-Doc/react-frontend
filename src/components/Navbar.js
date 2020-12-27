@@ -44,7 +44,7 @@ const Navbar = () => {
             <Link to="/404" className="nav-link w-nav-link">
               <i className="fas fa-utensils" />
             </Link>
-            <Link to="/404" className="nav-link w-nav-link">
+            <Link to="/profile/me" className="nav-link w-nav-link">
               <i className="fas fa-user-circle" />
             </Link>
           </nav>

@@ -25,13 +25,13 @@ const SNSPost = () => {
                 <div className="w-icon-dropdown-toggle"></div>
               </div>
               <nav className="w-dropdown-list">
-                <a href="#" className="dropdown-post w-dropdown-link">
+                <a href="/404" className="dropdown-post w-dropdown-link">
                   Edit
                 </a>
-                <a href="#" className="dropdown-post w-dropdown-link">
+                <a href="/404" className="dropdown-post w-dropdown-link">
                   Delete
                 </a>
-                <a href="#" className="dropdown-post w-dropdown-link">
+                <a href="/404" className="dropdown-post w-dropdown-link">
                   Link 3
                 </a>
               </nav>
@@ -65,16 +65,16 @@ const SNSPost = () => {
         </div>
         <div className="hr"></div>
         <div className="post-react">
-          <a href="#" className="clear-button post-interaction w-button">
-            <span className="icons"></span> <br />
+          <a href="/404" className="clear-button post-interaction w-button">
+            <i class="fas fa-thumbs-up"/><br />
             Like
           </a>
-          <a href="#" className="clear-button post-interaction w-button">
-            <span className="icons"></span> <br />
+          <a href="/404" className="clear-button post-interaction w-button">
+            <i class="fas fa-comment"/><br />
             Comment
           </a>
-          <a href="#" className="clear-button post-interaction w-button">
-            <span className="icons"></span> <br />
+          <a href="/404" className="clear-button post-interaction w-button">
+            <i class="fas fa-share"/><br />
             Share
           </a>
         </div>
