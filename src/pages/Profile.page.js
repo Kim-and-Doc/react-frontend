@@ -1,6 +1,7 @@
 import React from 'react';
 import CreatePost from '../components/CreatePost';
-import Navbar from '../components/Navbar';
+import Footer from '../components/hoc/Footer';
+import Navbar from '../components/hoc/Navbar';
 import ProfileBanner from '../components/ProfileBanner';
 import ProfileSideBar from '../components/ProfileSideBar';
 import SNSPost from '../components/SNSPost';
@@ -27,9 +28,10 @@ const Profile = () => {
           <SNSPost />
           <div className="divider"/>
         </div>
-        <div className="footer">
-          <h3>Footer</h3>
-        </div>
+        <div className="main-content-area-post-list">
+        <Footer />
+</div>
+
       </div>
     </div>
   );

@@ -1,10 +1,12 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/hoc/Navbar';
 import HomeSideLeft from '../components/HomeSideLeft'
 import HomeSideRight from '../components/HomeSideRight'
 import useScript from '../utils/useScript.hook';
 import CreatePost from '../components/CreatePost';
 import SNSPost from '../components/SNSPost';
+// import '../App.css'
+import Footer from '../components/hoc/Footer';
 
 const Home = () => {
   useScript(
@@ -27,9 +29,9 @@ const Home = () => {
           <SNSPost />
           <div className="divider"/>
         </div>
-        <div className="footer">
-          <h3>Footer</h3>
-        </div>
+        <div className="main-content-area-post-list">
+        <Footer />
+</div>
       </div>
     </div>
   );
