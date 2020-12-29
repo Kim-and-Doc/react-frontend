@@ -1,9 +1,11 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/hoc/Navbar';
 import FCPostThumbnail from '../components/FoodCommunityPostThumbnail';
 import FCSideBar from '../components/FoodCommunitySideBar';
-import Footer from '../components/Footer';
+import Footer from '../components/hoc/Footer';
 import useScript from '../utils/useScript.hook';
+// import '../FoodCommunity-Chat.css'
+// import '../App.css'
 
 const FoodCommunityIndex = () => {
   useScript(
@@ -12,10 +14,14 @@ const FoodCommunityIndex = () => {
   useScript(
     'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
   );
+  useScript(
+    'https://res.cloudinary.com/hsse18xji/raw/upload/v1609013151/portfolio/js/snf-webflow_rnkr6i.js',
+  );
 
   return (
     <div className="body">
-      <Navbar />
+    <Navbar />
+      
       <div className="main-content-area">
         <div className="main-content-area-post-list">
           <FCSideBar />

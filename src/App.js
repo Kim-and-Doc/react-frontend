@@ -4,7 +4,7 @@ import Home from './pages/Home.page';
 import NotFound from './pages/NotFound.page';
 import Profile from './pages/Profile.page';
 import FoodCommunityIndex from './pages/FoodCommunityIndex.page';
-import './App.css';
+import './Home-Profile.css';
 import './FoodCommunity-Chat.css';
 
 function App() {
