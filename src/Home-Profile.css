@@ -1337,7 +1337,7 @@
 }
 
 .post-dropdown {
-  padding-right: 35px;
+  padding-right: 20px;
 }
 
 .post-dropdown.w--open {
@@ -2163,4 +2163,7 @@
     max-width: 215px;
     min-width: 215px;
   }
+}
+.center-dot{
+  text-align: center;
 }

@@ -41,7 +41,7 @@ const Navbar = () => {
             <Link to="/404" className="nav-link w-nav-link">
               <i className="fab fa-facebook-messenger" />
             </Link>
-            <Link to="/404" className="nav-link w-nav-link">
+            <Link to="/food-community/main" className="nav-link w-nav-link">
               <i className="fas fa-utensils" />
             </Link>
             <Link to="/profile/me" className="nav-link w-nav-link">

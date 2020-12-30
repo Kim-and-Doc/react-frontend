@@ -1,10 +1,10 @@
 import React from 'react';
-import CreatePost from '../components/CreatePost';
+import CreatePost from '../components/post/CreatePost';
 import Footer from '../components/hoc/Footer';
 import Navbar from '../components/hoc/Navbar';
-import ProfileBanner from '../components/ProfileBanner';
-import ProfileSideBar from '../components/ProfileSideBar';
-import SNSPost from '../components/SNSPost';
+import ProfileBanner from '../components/sidebar/ProfileBanner';
+import ProfileSideBar from '../components/sidebar/ProfileSideBar';
+import SNSPost from '../components/post/SNSPost';
 import useScript from '../utils/useScript.hook';
 
 const Profile = () => {
@@ -18,20 +18,19 @@ const Profile = () => {
     <div className="flex-body">
       <Navbar />
       <ProfileBanner />
-      <div className="divider"/>
+      <div className="divider" />
       <ProfileSideBar />
       <div className="profile-container">
         <div className="profile-content">
-          <div className="divider"/>
+          <div className="divider" />
           <CreatePost />
-          <div className="divider"/>
+          <div className="divider" />
           <SNSPost />
-          <div className="divider"/>
+          <div className="divider" />
         </div>
         <div className="main-content-area-post-list">
-        <Footer />
-</div>
-
+          <Footer />
+        </div>
       </div>
     </div>
   );

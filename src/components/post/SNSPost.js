@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentThread from './CommentThread';
-import UserImgSm from './UserImgSm';
+import UserImgSm from '../hoc/UserImgSm';
+import PostSettings from './PostSettings';
 
 const SNSPost = () => {
   return (
@@ -19,24 +20,7 @@ const SNSPost = () => {
             </div>
             <div className="post-date">October 28, 2020</div>
           </div>
-          <div className="post-settings">
-            <div data-hover="" data-delay="0" className="w-dropdown">
-              <div className="post-dropdown w-dropdown-toggle">
-                <div className="w-icon-dropdown-toggle"></div>
-              </div>
-              <nav className="w-dropdown-list">
-                <a href="/404" className="dropdown-post w-dropdown-link">
-                  Edit
-                </a>
-                <a href="/404" className="dropdown-post w-dropdown-link">
-                  Delete
-                </a>
-                <a href="/404" className="dropdown-post w-dropdown-link">
-                  Link 3
-                </a>
-              </nav>
-            </div>
-          </div>
+          <PostSettings />
         </div>
         <div className="hr"></div>
         <div className="post-text">
@@ -66,15 +50,18 @@ const SNSPost = () => {
         <div className="hr"></div>
         <div className="post-react">
           <a href="/404" className="clear-button post-interaction w-button">
-            <i class="fas fa-thumbs-up"/><br />
+            <i className="fas fa-thumbs-up" />
+            <br />
             Like
           </a>
           <a href="/404" className="clear-button post-interaction w-button">
-            <i class="fas fa-comment"/><br />
+            <i className="fas fa-comment" />
+            <br />
             Comment
           </a>
           <a href="/404" className="clear-button post-interaction w-button">
-            <i class="fas fa-share"/><br />
+            <i className="fas fa-share" />
+            <br />
             Share
           </a>
         </div>

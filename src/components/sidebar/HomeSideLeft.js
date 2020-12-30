@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './SNSButton';
+import Button from '../hoc/SNSButton';
 
 const HomeSideLeft = () => {
   return (

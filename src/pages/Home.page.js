@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from '../components/hoc/Navbar';
-import HomeSideLeft from '../components/HomeSideLeft'
-import HomeSideRight from '../components/HomeSideRight'
+import HomeSideLeft from '../components/sidebar/HomeSideLeft'
+import HomeSideRight from '../components/sidebar/HomeSideRight'
 import useScript from '../utils/useScript.hook';
-import CreatePost from '../components/CreatePost';
-import SNSPost from '../components/SNSPost';
+import CreatePost from '../components/post/CreatePost';
+import SNSPost from '../components/post/SNSPost';
 // import '../App.css'
 import Footer from '../components/hoc/Footer';
 

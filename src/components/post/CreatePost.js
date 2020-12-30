@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './SNSButton';
-import UserImgSm from './UserImgSm';
+import Button from '../hoc/SNSButton';
+import UserImgSm from '../hoc/UserImgSm';
 
 const CreatePost = () => {
   return (

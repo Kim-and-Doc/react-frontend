@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/hoc/Navbar';
-import FCPostThumbnail from '../components/FoodCommunityPostThumbnail';
-import FCSideBar from '../components/FoodCommunitySideBar';
+import FCPostThumbnail from '../components/post/FoodCommunityPostThumbnail';
+import FCSideBar from '../components/sidebar/FoodCommunitySideBar';
 import Footer from '../components/hoc/Footer';
 import useScript from '../utils/useScript.hook';
 // import '../FoodCommunity-Chat.css'
