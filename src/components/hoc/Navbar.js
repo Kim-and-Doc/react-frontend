@@ -15,9 +15,9 @@ const Navbar = () => {
           <div className="icon-2 w-icon-nav-menu"></div>
         </div>
         <div className="nav-content">
-          <a href="/" className="brand w-nav-brand">
+          <Link to="/" className="brand w-nav-brand">
             <div className="nav-logo-txt">SNF</div>
-          </a>
+          </Link>
           <form action="/search" className="text-input nav-search w-form">
             <input
               type="search"
