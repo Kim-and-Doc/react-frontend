@@ -1,5 +1,5 @@
 import React from 'react';
-import UserImgSm from './UserImgSm';
+import UserImgSm from '../hoc/UserImgSm';
 
 const CommentThread = ({
   children,
