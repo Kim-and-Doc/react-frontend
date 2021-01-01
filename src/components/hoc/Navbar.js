@@ -47,6 +47,10 @@ const Navbar = () => {
             <Link to="/profile/me" className="nav-link w-nav-link">
               <i className="fas fa-user-circle" />
             </Link>
+            <Link to="/logout" className="nav-link w-nav-link">
+              <i class="fas fa-sign-out-alt"/>
+            </Link>
+            
           </nav>
         </div>
       </div>

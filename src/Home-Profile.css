@@ -106,7 +106,7 @@
 }
 
 .nav-links {
-  left: auto;
+  left: 30px;
   top: -43px;
   margin: 0px auto;
 }
@@ -1528,6 +1528,7 @@
 
   .nav-links {
     position: fixed;
+    left: auto;
     top: auto;
     right: 0%;
     display: -webkit-box;
