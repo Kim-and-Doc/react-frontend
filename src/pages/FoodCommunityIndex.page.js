@@ -4,8 +4,6 @@ import FCPostThumbnail from '../components/post/FoodCommunityPostThumbnail';
 import FCSideBar from '../components/sidebar/FoodCommunitySideBar';
 import Footer from '../components/hoc/Footer';
 import useScript from '../utils/useScript.hook';
-// import '../FoodCommunity-Chat.css'
-// import '../App.css'
 
 const FoodCommunityIndex = () => {
   useScript(
@@ -26,6 +24,8 @@ const FoodCommunityIndex = () => {
         <div className="main-content-area-post-list">
           <FCSideBar />
           <div className="w-layout-grid main-content-left-grid">
+            <FCPostThumbnail />
+            <FCPostThumbnail />
             <FCPostThumbnail />
           </div>          
           <Footer />
