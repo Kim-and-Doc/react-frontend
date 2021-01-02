@@ -5,8 +5,8 @@ import HomeSideRight from '../components/sidebar/HomeSideRight';
 import useScript from '../utils/useScript.hook';
 import CreatePost from '../components/post/CreatePost';
 import SNSPost from '../components/post/SNSPost';
-// import '../App.css'
 import Footer from '../components/hoc/Footer';
+import PopupForm from '../components/hoc/PopupForm';
 
 const Home = () => {
   useScript(
@@ -18,6 +18,7 @@ const Home = () => {
   // ! Add Redux, SNSPost, Links, Notifs, CommentThread
   return (
     <div className="flex-body">
+    <PopupForm />
       <Navbar />
       <HomeSideLeft />
       <HomeSideRight />
