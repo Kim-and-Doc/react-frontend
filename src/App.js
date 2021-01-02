@@ -6,6 +6,7 @@ import Profile from './pages/Profile.page';
 import FoodCommunityIndex from './pages/FoodCommunityIndex.page';
 import './Home-Profile.css';
 import './FoodCommunity-Chat.css';
+import Auth from './pages/Auth.page';
 
 const App = () => {
   return (
@@ -13,9 +14,10 @@ const App = () => {
       <Route exact path="/" component={Home} />
       <Route path="/profile/me" component={Profile} />
       <Route path="/food-community/main" component={FoodCommunityIndex} />
+      <Route path="/auth" component={Auth} />
       <Route component={NotFound} />
     </Switch>
   );
-}
+};
 
 export default App;

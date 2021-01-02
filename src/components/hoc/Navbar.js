@@ -47,9 +47,8 @@ const Navbar = () => {
               <i className="fas fa-user-circle" />
             </a>
             <a href="/logout" className="nav-link w-nav-link">
-              <i class="fas fa-sign-out-alt"/>
+              <i className="fas fa-sign-out-alt" />
             </a>
-            
           </nav>
         </div>
       </div>

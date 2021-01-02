@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from '../hoc/SNSButton';
 import UserImgSm from '../hoc/UserImgSm';
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-const CreatePost = ({currentUser}) => {
+const CreatePost = ({ currentUser }) => {
   return (
     <div className="create-post">
       <div className="post-component">
@@ -35,13 +35,11 @@ const CreatePost = ({currentUser}) => {
 };
 
 CreatePost.propTypes = {
-  currentUser: PropTypes.object.isRequired
-}
+  currentUser: PropTypes.object.isRequired,
+};
 
-const mapStateToProps = (state) => ({
-    currentUser: state.user.currentUser
-})
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser,
+});
 
 export default connect(mapStateToProps, null)(CreatePost);
-
-
