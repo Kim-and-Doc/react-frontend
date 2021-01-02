@@ -7,7 +7,7 @@ import FoodCommunityIndex from './pages/FoodCommunityIndex.page';
 import './Home-Profile.css';
 import './FoodCommunity-Chat.css';
 
-function App() {
+const App = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
