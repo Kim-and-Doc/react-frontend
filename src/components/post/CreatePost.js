@@ -35,7 +35,7 @@ const CreatePost = ({ currentUser }) => {
 };
 
 CreatePost.propTypes = {
-  currentUser: PropTypes.object.isRequired,
+  currentUser: PropTypes.object,
 };
 
 const mapStateToProps = state => ({

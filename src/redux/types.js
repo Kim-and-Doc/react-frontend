@@ -1,3 +1,9 @@
+// Popup
+export const SHOW_POPUP = "SHOW_POPUP"
+export const CLOSE_POPUP = "CLOSE_POPUP"
+export const POPUP_POST_SUCCESS = "POPUP_POST_SUCCESS"
+export const POPUP_POST_FAIL = "POPUP_POST_FAIL"
+
 // Auth
 export const SET_USER = 'SET_USER';
 export const AUTH_ERROR = 'AUTH_ERROR';

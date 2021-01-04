@@ -1150,7 +1150,7 @@
 }
 
 .popup-bg {
-  position: absolute;
+  position: fixed;
   z-index: 10000;
   display: -webkit-box;
   display: -webkit-flex;

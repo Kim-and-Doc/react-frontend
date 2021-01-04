@@ -1,14 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { closePopup } from '../../redux/popup/popup.actions';
 
-const PopupForm = () => {
+const PopupForm = ({ closePopup, route, buttonText }) => {
   return (
     <div className="popup-bg">
       <div className="popup">
         <div className="popup-header">
-          <h3 className="heading-2">Create Post</h3>
-          <a href="/404" className="close-x w-button">
+          <h3 className="heading-2">Create a {buttonText}</h3>
+          <button onClick={closePopup} className="close-x w-button">
             <strong>X</strong>
-          </a>
+          </button>
         </div>
         <div className="hr"></div>
         <div className="popup-input">
@@ -33,12 +36,9 @@ const PopupForm = () => {
                 className="popup-file-upload"
                 maxLength="256"
                 name="file"
+                accept="image/*|video/*"
               />
-              <input
-                type="submit"
-                value="Post"
-                className="post-btn w-button"
-              />
+              <input type="submit" value="Post" className="post-btn w-button" />
             </form>
           </div>
         </div>
@@ -46,4 +46,14 @@ const PopupForm = () => {
     </div>
   );
 };
-export default PopupForm;
+
+PopupForm.prototype = {
+  closePopup: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+  route: state.popup.route,
+  buttonText: state.popup.buttonText,
+});
+
+export default connect(mapStateToProps, { closePopup })(PopupForm);
