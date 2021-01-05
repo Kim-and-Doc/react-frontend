@@ -6,8 +6,11 @@ import ProfileBanner from '../components/sidebar/ProfileBanner';
 import ProfileSideBar from '../components/sidebar/ProfileSideBar';
 import SNSPost from '../components/post/SNSPost';
 import useScript from '../utils/useScript.hook';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import PopupForm from '../components/hoc/PopupForm';
 
-const Profile = () => {
+const Profile = ({ isOpen }) => {
   useScript(
     'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f87b4cc20eddf4260bad35a',
   );
@@ -16,6 +19,7 @@ const Profile = () => {
   );
   return (
     <div className="flex-body">
+      {isOpen ? <PopupForm /> : null}
       <Navbar />
       <ProfileBanner />
       <div className="divider" />
@@ -35,4 +39,12 @@ const Profile = () => {
     </div>
   );
 };
-export default Profile;
+
+Profile.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+};
+
+const mapStateToProps = state => ({
+  isOpen: state.popup.isOpen,
+});
+export default connect(mapStateToProps, {})(Profile);

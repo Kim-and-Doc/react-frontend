@@ -5,7 +5,7 @@ import { closePopup } from '../../redux/popup/popup.actions';
 
 const PopupForm = ({ closePopup, route, buttonText }) => {
   return (
-    <div className="popup-bg">
+    <div className="popup-bg" onClick={closePopup}>
       <div className="popup">
         <div className="popup-header">
           <h3 className="heading-2">Create a {buttonText}</h3>
