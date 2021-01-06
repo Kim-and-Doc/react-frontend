@@ -7,11 +7,13 @@ import FoodCommunityIndex from './pages/FoodCommunityIndex.page';
 import './Home-Profile.css';
 import './FoodCommunity-Chat.css';
 import Auth from './pages/Auth.page';
+import PrivateRoute from './components/hoc/PrivateRoute'
 
 const App = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      {/* <Route exact path="/" component={Home} /> */}
+      <PrivateRoute exact path="/" component={Home} />
       <Route path="/profile/me" component={Profile} />
       <Route path="/food-community/main" component={FoodCommunityIndex} />
       <Route path="/auth" component={Auth} />

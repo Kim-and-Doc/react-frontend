@@ -17,7 +17,6 @@ const Home = ({ isOpen }) => {
   useScript(
     'https://res.cloudinary.com/hsse18xji/raw/upload/v1609606257/SNF/js/webflow_tdaogu.js',
   );
-  // ! Add Redux, SNSPost, Links, Notifs, CommentThread
   return (
     <div className="flex-body">
       {isOpen ? <PopupForm /> : null}

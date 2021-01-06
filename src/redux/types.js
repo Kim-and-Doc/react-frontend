@@ -5,6 +5,7 @@ export const POPUP_POST_SUCCESS = "POPUP_POST_SUCCESS"
 export const POPUP_POST_FAIL = "POPUP_POST_FAIL"
 
 // Auth
+export const REDIRECTED = "REDIRECTED"
 export const SET_USER = 'SET_USER';
 export const AUTH_ERROR = 'AUTH_ERROR';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
