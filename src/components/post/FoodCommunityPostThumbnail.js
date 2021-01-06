@@ -2,37 +2,18 @@ import React from 'react';
 
 const FoodCommunityPostThumbnail = () => {
   return (
-    <div className="main-content-post-area">
-      <div className="main-content-post-heading">
-        <h1 className="grid-content-heading">Post Title</h1>
-      </div>
-      <div className="main-content-post-image">
-        <img
-          src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-          loading="lazy"
-          alt=""
-          className="grid-thumbnail"
-        />
-      </div>
-      <div className="main-content-post-description">
-        <p className="main-content-post-list-description">
-          Post Summary / Brief Description
-          <br />
-          ..
-          <br />
-          ..
-          <br />
-          ..
-          <br />
-          ..
-        </p>
-      </div>
-      <div className="main-content-post-view-button">
-        <a href="/404" className="main-content-post-list-view-button w-button">
-          View Post
-        </a>
-      </div>
-    </div>
+    <div class="main-content-post-area">
+          <div class="main-content-post-heading">
+            <h1 class="grid-content-heading">Post Title</h1>
+          </div>
+          <div class="main-content-post-image"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="grid-thumbnail" /></div>
+          <div class="main-content-post-description">
+            <p class="main-content-post-list-description">Post Summary / Brief Description<br/>..<br/>..<br/>..<br/>..</p>
+          </div>
+          <div class="main-content-post-view-button">
+            <a data-w-id="b28b83d0-0901-a56d-f712-ef2c071db0f1" href="#" class="main-content-post-list-view-button w-button">View Post</a>
+          </div>
+        </div>
   );
 };
 
