@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/hoc/Navbar';
 import FCPostThumbnail from '../components/post/FoodCommunityPostThumbnail';
 import FCSideBar from '../components/sidebar/FoodCommunitySideBar';
-import FCSearchBar from '../components/sidebar/FoodCommunitySearchBar';
+import FCSearchBar from '../components/hoc/FoodCommunitySearchBar';
 import Footer from '../components/hoc/Footer';
 import useScript from '../utils/useScript.hook';
 
@@ -19,8 +19,7 @@ const FoodCommunityIndex = () => {
 
   return (
     <div className="body">
-    <Navbar />
-      
+    <Navbar />  
       <div className="main-content-area">
         <div className="main-content-area-post-list">
           <FCSideBar />

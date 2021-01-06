@@ -3,8 +3,10 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="footer">
-        <div className="bottom-company-info-area">
-          <div className="company-logo-text">SNF</div>
+      <div className="bottom-company-info-area">
+        <a href="/" className="brand w-nav-brand">
+            <div className="company-logo-text">SNF</div>
+          </a>
           <div className="bottom-org-info-text-area">
             <p className="bottom-org-info-text">Kim-and-Doc is blah blah blah..........<br/>Brief company info (such as location is Calgary ....)</p>
           </div>
