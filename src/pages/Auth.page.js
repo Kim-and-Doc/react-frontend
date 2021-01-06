@@ -4,8 +4,11 @@ import Navbar from '../components/hoc/Navbar';
 import AuthTabContent from '../components/tab/AuthTabContent';
 import AuthTabMenu from '../components/tab/AuthTabMenu';
 import useScript from '../utils/useScript.hook';
+import Alert from '../components/hoc/Alert';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-const Auth = () => {
+const Auth = ({ alerts }) => {
   useScript(
     'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f87b4cc20eddf4260bad35a',
   );
@@ -14,6 +17,7 @@ const Auth = () => {
   );
   return (
     <div className="flex-body">
+      {alerts.length > 0 ? <Alert /> : null}
       <Navbar />
       <div className="profile-container">
         <div className="auth-container">
@@ -33,4 +37,12 @@ const Auth = () => {
     </div>
   );
 };
-export default Auth;
+
+Auth.propTypes = {
+  alerts: PropTypes.array.isRequired,
+};
+
+const mapStateToProps = state => ({
+  alerts: state.alerts,
+});
+export default connect(mapStateToProps, {})(Auth);

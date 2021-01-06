@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { clearAlerts } from '../../redux/alert/alert.actions';
 
-const Navbar = () => {
+const Navbar = ({ clearAlerts, alerts }) => {
+  useEffect(() => {
+    if (alerts.length > 0) {
+      clearAlerts();
+    }
+  }, [clearAlerts, alerts.length]);
   return (
     <div
       data-collapse="medium"
@@ -55,4 +63,13 @@ const Navbar = () => {
     </div>
   );
 };
-export default Navbar;
+
+Navbar.propTypes = {
+  clearAlerts: PropTypes.func.isRequired,
+  alerts: PropTypes.array.isRequired,
+};
+
+const mapStateToProps = state => ({
+  alerts: state.alerts,
+});
+export default connect(mapStateToProps, { clearAlerts })(Navbar);
