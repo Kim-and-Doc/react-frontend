@@ -1,10 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { showPopup } from '../../redux/popup/popup.actions';
 
-const SNSButton = ({ route, styleClass, buttonText, icon }) => {
+const SNSButton = ({ route, styleClass, buttonText, icon, showPopup }) => {
+  const handleClick = e => {
+    e.preventDefault();
+    if (buttonText === 'SNS Post' || buttonText === 'Food Post') {
+      showPopup({ isOpen: true, route, buttonText });
+    }
+  };
   return (
-    <a href={route} className={styleClass}>
+    <a href={route} className={styleClass} onClick={handleClick}>
       {icon ? <i className={icon} /> : null} {buttonText}
     </a>
   );
 };
-export default SNSButton;
+
+SNSButton.propTypes = {
+  showPopup: PropTypes.func.isRequired,
+};
+
+export default connect(null, { showPopup })(SNSButton);

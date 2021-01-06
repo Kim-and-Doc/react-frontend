@@ -1,7 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { clearAlerts } from '../../redux/alert/alert.actions';
 
-const Navbar = () => {
+const Navbar = ({ clearAlerts, alerts }) => {
+  useEffect(() => {
+    if (alerts.length > 0) {
+      clearAlerts();
+    }
+  }, [clearAlerts, alerts.length]);
   return (
     <div
       data-collapse="medium"
@@ -15,9 +22,9 @@ const Navbar = () => {
           <div className="icon-2 w-icon-nav-menu"></div>
         </div>
         <div className="nav-content">
-          <Link to="/" className="brand w-nav-brand">
+          <a href="/" className="brand w-nav-brand">
             <div className="nav-logo-txt">SNF</div>
-          </Link>
+          </a>
           <form action="/search" className="text-input nav-search w-form">
             <input
               type="search"
@@ -35,22 +42,34 @@ const Navbar = () => {
             />
           </form>
           <nav role="navigation" className="nav-links w-nav-menu">
-            <Link to="/" className="nav-link w-nav-link">
+            <a href="/" className="nav-link w-nav-link">
               <i className="fas fa-home" />
-            </Link>
-            <Link to="/404" className="nav-link w-nav-link">
+            </a>
+            <a href="/404" className="nav-link w-nav-link">
               <i className="fab fa-facebook-messenger" />
-            </Link>
-            <Link to="/food-community/main" className="nav-link w-nav-link">
+            </a>
+            <a href="/food-community/main" className="nav-link w-nav-link">
               <i className="fas fa-utensils" />
-            </Link>
-            <Link to="/profile/me" className="nav-link w-nav-link">
+            </a>
+            <a href="/profile/me" className="nav-link w-nav-link">
               <i className="fas fa-user-circle" />
-            </Link>
+            </a>
+            <a href="/logout" className="nav-link w-nav-link">
+              <i className="fas fa-sign-out-alt" />
+            </a>
           </nav>
         </div>
       </div>
     </div>
   );
 };
-export default Navbar;
+
+Navbar.propTypes = {
+  clearAlerts: PropTypes.func.isRequired,
+  alerts: PropTypes.array.isRequired,
+};
+
+const mapStateToProps = state => ({
+  alerts: state.alerts,
+});
+export default connect(mapStateToProps, { clearAlerts })(Navbar);

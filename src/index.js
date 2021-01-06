@@ -10,7 +10,7 @@ import App from './App';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router forceRefresh>
         <PersistGate persistor={persistor}>
           <App />
         </PersistGate>

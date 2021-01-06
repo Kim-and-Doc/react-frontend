@@ -4,8 +4,6 @@ import FCPostThumbnail from '../components/post/FoodCommunityPostThumbnail';
 import FCSideBar from '../components/sidebar/FoodCommunitySideBar';
 import Footer from '../components/hoc/Footer';
 import useScript from '../utils/useScript.hook';
-// import '../FoodCommunity-Chat.css'
-// import '../App.css'
 
 const FoodCommunityIndex = () => {
   useScript(
@@ -15,7 +13,7 @@ const FoodCommunityIndex = () => {
     'https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg',
   );
   useScript(
-    'https://res.cloudinary.com/hsse18xji/raw/upload/v1609013151/portfolio/js/snf-webflow_rnkr6i.js',
+    'https://res.cloudinary.com/hsse18xji/raw/upload/v1609606257/SNF/js/webflow_tdaogu.js',
   );
 
   return (
@@ -26,6 +24,8 @@ const FoodCommunityIndex = () => {
         <div className="main-content-area-post-list">
           <FCSideBar />
           <div className="w-layout-grid main-content-left-grid">
+            <FCPostThumbnail />
+            <FCPostThumbnail />
             <FCPostThumbnail />
           </div>          
           <Footer />
