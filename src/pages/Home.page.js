@@ -21,7 +21,7 @@ const Home = ({ isOpen }) => {
     <div className="flex-body">
       {isOpen ? <PopupForm /> : null}
 
-      <Navbar />
+      <Navbar type="sns" />
       <HomeSideLeft />
       <HomeSideRight />
       <div className="profile-container">
@@ -33,7 +33,7 @@ const Home = ({ isOpen }) => {
           <div className="divider" />
         </div>
         <div className="main-content-area-post-list">
-          <Footer />
+          <Footer type="sns" />
         </div>
       </div>
     </div>

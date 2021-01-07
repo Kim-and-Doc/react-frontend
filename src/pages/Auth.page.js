@@ -18,7 +18,7 @@ const Auth = ({ alerts }) => {
   return (
     <div className="flex-body">
       {alerts.length > 0 ? <Alert /> : null}
-      <Navbar />
+      <Navbar type="sns" />
       <div className="profile-container">
         <div className="auth-container">
           <div
@@ -31,7 +31,7 @@ const Auth = ({ alerts }) => {
           </div>
         </div>
         <div className="main-content-area-post-list">
-          <Footer />
+          <Footer type="sns" />
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ const INI_STATE = {
   isOpen: false,
   route: null,
   buttonText: null,
+  type: null,
 };
 
 const userReducer = (state = INI_STATE, { type, payload }) => {
@@ -14,6 +15,7 @@ const userReducer = (state = INI_STATE, { type, payload }) => {
         isOpen: payload.isOpen,
         route: payload.route,
         buttonText: payload.buttonText,
+        type: payload.type,
       };
     case CLOSE_POPUP:
       return {

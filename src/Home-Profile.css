@@ -58,7 +58,6 @@
   border: 1px solid #6983aa;
   border-radius: 10px;
   background-color: #8ec6c5;
-  background-image: -webkit-gradient(linear, right top, left top, from(#4715a3), color-stop(64%, #13a2a7), to(#22e3b8));
   background-image: linear-gradient(270deg, #4715a3, #13a2a7 64%, #22e3b8);
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
@@ -70,6 +69,25 @@
 
 .nav-logo-txt:hover {
   box-shadow: -1px 1px 3px 0 #22e3b8;
+}
+
+.nav-logo-txt-food {
+  position: static;
+  margin: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fd911d;
+  background-image: linear-gradient(102deg, #ddc32c, #fc931e 16%, #fd911d 21%, #b91717);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  font-family: Exo, sans-serif;
+  color: hsla(0, 0%, 95.7%, 0.81);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.nav-logo-txt-food:hover {
+  box-shadow: -1px 1px 3px 0 #000;
 }
 
 .brand {
@@ -1282,6 +1300,31 @@
   box-shadow: -1px 1px 3px 0 #000;
 }
 
+.close-x-food {
+  position: absolute;
+  left: auto;
+  top: 24%;
+  right: 25%;
+  bottom: auto;
+  max-height: 40px;
+  min-height: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  border-radius: 200px;
+  background-color: rgba(192, 29, 32, 0.95);
+  box-shadow: 1px 1px 3px 0 #000;
+  -webkit-transition: all 400ms ease, background-color 400ms ease;
+  transition: all 400ms ease, background-color 400ms ease;
+  text-align: center;
+}
+
+.close-x-food:hover {
+  background-color: #e74242;
+  box-shadow: -1px 1px 3px 0 #000;
+}
+
 .popup-textarea {
   max-height: 100%;
   max-width: 100%;
@@ -1321,6 +1364,21 @@
 
 .post-btn:hover {
   background-color: #6018e6;
+  background-image: none;
+  box-shadow: -1px 1px 3px 0 #000;
+}
+
+.post-btn-food {
+  min-width: 100%;
+  border-radius: 8px;
+  background-color: rgba(192, 29, 32, 0.95);
+  box-shadow: 1px 1px 3px 0 #000;
+  -webkit-transition: background-color 400ms ease, all 400ms ease;
+  transition: background-color 400ms ease, all 400ms ease;
+}
+
+.post-btn-food:hover {
+  background-color: #e74242;
   background-image: none;
   box-shadow: -1px 1px 3px 0 #000;
 }
@@ -1685,6 +1743,43 @@
   -ms-flex-align: center;
   align-items: center;
   background-color: rgba(34, 227, 184, 0.49);
+}
+
+.company-logo-text-food {
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  background-color: #13a2a7;
+  background-image: linear-gradient(102deg, #ddc32c, #fc931e 16%, #fd911d 21%, #b91717);
+  font-family: Exo, sans-serif;
+  color: hsla(0, 0%, 95.7%, 0.81);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.company-logo-text-food:hover { 
+  box-shadow: -1px 1px 3px 0 #000;
+}
+
+.company-logo-text {
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 15px 10px;
+  border: 1px solid #6983aa;
+  border-radius: 10px;
+  background-color: #8ec6c5;
+  background-image: linear-gradient(270deg, #4715a3, #13a2a7 64%, #22e3b8);
+  font-family: Exo, sans-serif;
+  color: hsla(0, 0%, 95.7%, 0.81);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.company-logo-text:hover {
+  box-shadow: -1px 1px 3px 0 #22e3b8;
 }
 
 @media screen and (max-width: 991px) {

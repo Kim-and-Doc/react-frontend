@@ -19,7 +19,7 @@ const FoodCommunityIndex = () => {
 
   return (
     <div className="body">
-    <Navbar />  
+      <Navbar type="food" />
       <div className="main-content-area">
         <div className="main-content-area-post-list">
           <FCSideBar />
@@ -28,12 +28,12 @@ const FoodCommunityIndex = () => {
             <FCPostThumbnail />
             <FCPostThumbnail />
             <FCPostThumbnail />
-          </div>          
-          <Footer />
+          </div>
+          <Footer type="food" />
         </div>
       </div>
     </div>
   );
 };
-      
+
 export default FoodCommunityIndex;

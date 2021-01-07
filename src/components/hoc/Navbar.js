@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { clearAlerts } from '../../redux/alert/alert.actions';
 
-const Navbar = ({ clearAlerts, alerts }) => {
+const Navbar = ({ clearAlerts, alerts, type }) => {
   useEffect(() => {
     if (alerts.length > 0) {
       clearAlerts();
@@ -23,7 +23,11 @@ const Navbar = ({ clearAlerts, alerts }) => {
         </div>
         <div className="nav-content">
           <a href="/" className="brand w-nav-brand">
-            <div className="nav-logo-txt">SNF</div>
+            <div
+              className={type === 'food' ? 'nav-logo-txt-food' : 'nav-logo-txt'}
+            >
+              SNF
+            </div>
           </a>
           <form action="/search" className="text-input nav-search w-form">
             <input

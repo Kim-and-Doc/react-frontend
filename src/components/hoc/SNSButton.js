@@ -7,7 +7,9 @@ const SNSButton = ({ route, styleClass, buttonText, icon, showPopup }) => {
   const handleClick = e => {
     e.preventDefault();
     if (buttonText === 'SNS Post' || buttonText === 'Food Post') {
-      showPopup({ isOpen: true, route, buttonText });
+      buttonText === 'SNS Post'
+        ? showPopup({ isOpen: true, route, buttonText, type: 'sns' })
+        : showPopup({ isOpen: true, route, buttonText, type: 'food' });
     }
   };
   return (
