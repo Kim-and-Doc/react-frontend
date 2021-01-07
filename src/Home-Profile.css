@@ -428,6 +428,46 @@
   color: #13a2a7;
 }
 
+.nav-link-food {
+  -webkit-transition: color 500ms ease;
+  transition: color 500ms ease;
+  font-family: 'Fa solid 900', sans-serif;
+}
+
+.nav-link-food:hover {
+  color: #fd911d;
+}
+
+.w-nav-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #f4f4f4;
+  padding: 20px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.w-nav-link.w--current {
+  color: #13a2a7;
+}
+
+.w-nav-link-food {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #f4f4f4;
+  padding: 20px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.w-nav-link-food.w--current {
+  color: #fd911d;
+}
+
 .profile-container {
   position: relative;
   z-index: 1;

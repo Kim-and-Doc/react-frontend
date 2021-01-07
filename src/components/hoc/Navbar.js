@@ -9,6 +9,9 @@ const Navbar = ({ clearAlerts, alerts, type }) => {
       clearAlerts();
     }
   }, [clearAlerts, alerts.length]);
+
+  const navLinkClass = type === 'food' ? 'nav-link-food w-nav-link-food' : 'nav-link w-nav-link';
+
   return (
     <div
       data-collapse="medium"
@@ -46,19 +49,19 @@ const Navbar = ({ clearAlerts, alerts, type }) => {
             />
           </form>
           <nav role="navigation" className="nav-links w-nav-menu">
-            <a href="/" className="nav-link w-nav-link">
+            <a href="/" className={navLinkClass}>
               <i className="fas fa-home" />
             </a>
-            <a href="/404" className="nav-link w-nav-link">
+            <a href="/404" className={navLinkClass}>
               <i className="fab fa-facebook-messenger" />
             </a>
-            <a href="/food-community/main" className="nav-link w-nav-link">
+            <a href="/food-community/main" className={navLinkClass}>
               <i className="fas fa-utensils" />
             </a>
-            <a href="/profile/me" className="nav-link w-nav-link">
+            <a href="/profile/me" className={navLinkClass}>
               <i className="fas fa-user-circle" />
             </a>
-            <a href="/logout" className="nav-link w-nav-link">
+            <a href="/logout" className={navLinkClass}>
               <i className="fas fa-sign-out-alt" />
             </a>
           </nav>
