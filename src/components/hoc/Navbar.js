@@ -10,7 +10,8 @@ const Navbar = ({ clearAlerts, alerts, type }) => {
     }
   }, [clearAlerts, alerts.length]);
 
-  const navLinkClass = type === 'food' ? 'nav-link-food w-nav-link-food' : 'nav-link w-nav-link';
+  const navLinkClass =
+    type === 'food' ? 'nav-link-food w-nav-link-food' : 'nav-link w-nav-link';
 
   return (
     <div
