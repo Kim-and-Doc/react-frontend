@@ -27,7 +27,7 @@ const ProfileSideBar = () => {
       <div className="divider"></div>
       <div className="setting-container">
         <a href="/404" className="profile-side-btn w-button">
-          <i className="fas fa-photo-video" /> Photos/Videos
+          <i className="fas fa-photo-video" /> Favourite Food Posts
         </a>
       </div>
       <div className="divider"></div>

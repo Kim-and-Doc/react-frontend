@@ -61,7 +61,7 @@ const Navbar = ({ clearAlerts, alerts, type }) => {
             <a href="/profile/me" className={navLinkClass}>
               <i className="fas fa-user-circle" />
             </a>
-            <a href="/logout" className={navLinkClass}>
+            <a href="/auth" className={navLinkClass}>
               <i className="fas fa-sign-out-alt" />
             </a>
           </nav>
