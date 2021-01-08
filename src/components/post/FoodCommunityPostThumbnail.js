@@ -11,7 +11,7 @@ const FoodCommunityPostThumbnail = () => {
             <p className="main-content-post-list-description">Post Summary / Brief Description<br/>..<br/>..<br/>..<br/>..</p>
           </div>
           <div className="main-content-post-view-button">
-            <a data-w-id="b28b83d0-0901-a56d-f712-ef2c071db0f1" href="#" className="main-content-post-list-view-button w-button">View Post</a>
+            <a data-w-id="b28b83d0-0901-a56d-f712-ef2c071db0f1" href="/404" className="main-content-post-list-view-button w-button">View Post</a>
           </div>
         </div>
   );

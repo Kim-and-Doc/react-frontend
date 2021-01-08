@@ -6,7 +6,7 @@ import useScript from '../utils/useScript.hook';
 import CreatePost from '../components/post/CreatePost';
 import SNSPost from '../components/post/SNSPost';
 import Footer from '../components/hoc/Footer';
-import PopupForm from '../components/hoc/PopupForm';
+import PopupForm from '../components/hoc/PopupPostForm';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 

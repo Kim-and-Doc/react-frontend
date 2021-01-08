@@ -10,12 +10,12 @@ const SNSButton = ({ route, styleClass, buttonText, icon, showPopup }) => {
     if (
       buttonText === 'SNS Post' ||
       buttonText === 'Food Post' ||
-      buttonText === 'Upload Post'
+      buttonText === 'Upload Post' || buttonText === "Edit Profile"
     ) {
       if (buttonText === 'Upload Post') buttonText = 'Food Post';
-      buttonText === 'SNS Post'
-        ? showPopup({ isOpen: true, route, buttonText, type: 'sns' })
-        : showPopup({ isOpen: true, route, buttonText, type: 'food' });
+        buttonText === "Edit Profile" ? showPopup({ isOpen: false, isProfileOpen: true, route, buttonText, type: 'sns' }) : buttonText === 'SNS Post'
+        ? showPopup({ isOpen: true, isProfileOpen: false, route, buttonText, type: 'sns' })
+        : showPopup({ isOpen: true, isProfileOpen: false, route, buttonText, type: 'food' });
     }
   };
   return (

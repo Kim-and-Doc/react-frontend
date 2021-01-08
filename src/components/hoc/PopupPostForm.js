@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { closePopup } from '../../redux/popup/popup.actions';
 
-const PopupForm = ({ closePopup, route, buttonText, type }) => {
+const PopupPostForm = ({ closePopup, route, buttonText, type, cName }) => {
   return (
-    <div className="popup-bg">
-      <div className="popup">
+    <div className={cName ? cName : "popup-bg"}>
+      <div className="popup"
+      >
         <div className="popup-header">
           <h3 className="heading-2">Create a {buttonText}</h3>
           <button
@@ -23,7 +24,7 @@ const PopupForm = ({ closePopup, route, buttonText, type }) => {
           <div className="popup-form-block">
             <form className="popup-form">
               <textarea
-                placeholder="What&#x27;s on your mind, Suzy?"
+                placeholder="What&#x27;s on your mind, CHANGE THIS TO nAME?"
                 maxLength="5000"
                 id="post"
                 name="post"
@@ -54,7 +55,7 @@ const PopupForm = ({ closePopup, route, buttonText, type }) => {
   );
 };
 
-PopupForm.prototype = {
+PopupPostForm.prototype = {
   closePopup: PropTypes.func.isRequired,
 };
 
@@ -64,4 +65,4 @@ const mapStateToProps = state => ({
   type: state.popup.type,
 });
 
-export default connect(mapStateToProps, { closePopup })(PopupForm);
+export default connect(mapStateToProps, { closePopup })(PopupPostForm);

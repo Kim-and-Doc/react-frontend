@@ -8,9 +8,10 @@ import SNSPost from '../components/post/SNSPost';
 import useScript from '../utils/useScript.hook';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import PopupForm from '../components/hoc/PopupForm';
+import PopupForm from '../components/hoc/PopupPostForm';
+import PopupProfileForm from '../components/hoc/PopupProfileForm';
 
-const Profile = ({ isOpen }) => {
+const Profile = ({ isOpen, isProfileOpen }) => {
   useScript(
     'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f87b4cc20eddf4260bad35a',
   );
@@ -20,6 +21,7 @@ const Profile = ({ isOpen }) => {
   return (
     <div className="flex-body">
       {isOpen ? <PopupForm /> : null}
+      {isProfileOpen ? <PopupProfileForm /> : null}
       <Navbar type="sns" />
       <ProfileBanner />
       <div className="divider" />
@@ -42,9 +44,11 @@ const Profile = ({ isOpen }) => {
 
 Profile.propTypes = {
   isOpen: PropTypes.bool.isRequired,
+  isProfileOpen: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
   isOpen: state.popup.isOpen,
+  isProfileOpen: state.popup.isProfileOpen,
 });
 export default connect(mapStateToProps, {})(Profile);

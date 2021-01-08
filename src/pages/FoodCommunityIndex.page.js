@@ -7,7 +7,7 @@ import Footer from '../components/hoc/Footer';
 import useScript from '../utils/useScript.hook';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import PopupForm from '../components/hoc/PopupForm';
+import PopupForm from '../components/hoc/PopupPostForm';
 
 const FoodCommunityIndex = ({ isOpen }) => {
   useScript(
@@ -23,9 +23,7 @@ const FoodCommunityIndex = ({ isOpen }) => {
   return (
     <div className="body">
       {isOpen ? (
-        <div className="flex-body">
-          <PopupForm />
-        </div>
+          <PopupForm cName="popup-bg popup-outisde-flex-box" />
       ) : null}
       <Navbar type="food" />
       <div className="main-content-area">
