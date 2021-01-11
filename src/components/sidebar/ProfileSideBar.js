@@ -1,4 +1,5 @@
 import React from 'react';
+import SNSButton from '../hoc/SNSButton';
 
 const ProfileSideBar = () => {
   return (
@@ -20,14 +21,17 @@ const ProfileSideBar = () => {
       </div>
       <div className="divider"></div>
       <div className="setting-container">
-        <a href="/404" className="profile-side-btn w-button">
-          <i className="fas fa-cog" /> Edit Profile
-        </a>
+        <SNSButton
+          route="#"
+              styleClass="profile-side-btn w-button"
+              buttonText="Edit Profile"
+              icon="fas fa-cog"
+              />
       </div>
       <div className="divider"></div>
       <div className="setting-container">
         <a href="/404" className="profile-side-btn w-button">
-          <i className="fas fa-photo-video" /> Photos/Videos
+          <i className="fas fa-photo-video" /> Favourite Food Posts
         </a>
       </div>
       <div className="divider"></div>

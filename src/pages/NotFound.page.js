@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/hoc/Footer';
 import Navbar from '../components/hoc/Navbar';
-import useScript from '../utils/useScript.hook'
+import useScript from '../utils/useScript.hook';
 
 const NotFound = () => {
   useScript(
@@ -12,7 +12,7 @@ const NotFound = () => {
   );
   return (
     <div>
-      <Navbar />
+      <Navbar type="sns" />
       <div className="utility-page-wrap">
         <div className="utility-page-content w-form">
           <img
@@ -28,7 +28,7 @@ const NotFound = () => {
           </a>
         </div>
       </div>
-      <Footer />
+      <Footer type="sns" />
     </div>
   );
 };

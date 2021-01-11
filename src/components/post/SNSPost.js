@@ -34,14 +34,11 @@ const SNSPost = () => {
           <br />
           This‍
         </div>
-        <div className="post-media">
-          <img
-            src="https://images7.alphacoders.com/465/thumb-1920-465099.jpg"
-            loading="lazy"
-            alt="SNS Post"
-            className="post-imgage"
-          />
-        </div>
+        <div className="post-media" style={{
+        'background-image': `url(${
+          "https://images7.alphacoders.com/465/thumb-1920-465099.jpg"
+          })`,
+      }} />
         <div className="post-count">
           <div className="like-count">Likes 69</div>
           <div className="count-spacer"> </div>

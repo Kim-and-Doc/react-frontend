@@ -5,8 +5,11 @@ import FCSideBar from '../components/sidebar/FoodCommunitySideBar';
 import FCSearchBar from '../components/hoc/FoodCommunitySearchBar';
 import Footer from '../components/hoc/Footer';
 import useScript from '../utils/useScript.hook';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import PopupForm from '../components/hoc/PopupPostForm';
 
-const FoodCommunityIndex = () => {
+const FoodCommunityIndex = ({ isOpen }) => {
   useScript(
     'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fa8117aabbd5e54dba895c2',
   );
@@ -19,7 +22,10 @@ const FoodCommunityIndex = () => {
 
   return (
     <div className="body">
-    <Navbar />  
+      {isOpen ? (
+          <PopupForm cName="popup-bg popup-outisde-flex-box" />
+      ) : null}
+      <Navbar type="food" />
       <div className="main-content-area">
         <div className="main-content-area-post-list">
           <FCSideBar />
@@ -28,12 +34,19 @@ const FoodCommunityIndex = () => {
             <FCPostThumbnail />
             <FCPostThumbnail />
             <FCPostThumbnail />
-          </div>          
-          <Footer />
+          </div>
+          <Footer type="food" />
         </div>
       </div>
     </div>
   );
 };
-      
-export default FoodCommunityIndex;
+
+FoodCommunityIndex.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+};
+
+const mapStateToProps = state => ({
+  isOpen: state.popup.isOpen,
+});
+export default connect(mapStateToProps, {})(FoodCommunityIndex);
