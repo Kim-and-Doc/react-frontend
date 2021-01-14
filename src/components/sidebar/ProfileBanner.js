@@ -6,7 +6,7 @@ const ProfileBanner = () => {
     <div
       className="profile-banner"
       style={{
-        'background-image': `url("https://upload.wikimedia.org/wikipedia/commons/5/57/Calgary_banner_Panorama.jpg")`,
+        'backgroundImage': `url("https://upload.wikimedia.org/wikipedia/commons/5/57/Calgary_banner_Panorama.jpg")`,
       }}
     >
       <UserImgSm

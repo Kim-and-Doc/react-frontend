@@ -5,10 +5,10 @@ const UserImgSm = ({ upperStyleClass, image }) => {
     <div
       className={upperStyleClass}
       style={{
-        'background-image': `url(${image})`,
-        'background-position': '50% 50%',
-        'background-size': 'cover',
-        'background-repeat': 'no-repeat',
+        'backgroundImage': `url(${image})`,
+        'backgroundPosition': '50% 50%',
+        'backgroundSize': 'cover',
+        'backgroundRepeat': 'no-repeat',
       }}
     ></div>
   );

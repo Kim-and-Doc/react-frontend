@@ -35,7 +35,7 @@ const SNSPost = () => {
           This‍
         </div>
         <div className="post-media" style={{
-        'background-image': `url(${
+        'backgroundImage': `url(${
           "https://images7.alphacoders.com/465/thumb-1920-465099.jpg"
           })`,
       }} />
