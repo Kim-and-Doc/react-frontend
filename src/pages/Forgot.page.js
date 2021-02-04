@@ -43,7 +43,7 @@ const Forgot = ({ alerts }) => {
                       <h2 className="auth-header">Forgot Password</h2>
                       <div id="formInstructions" className="auth-text">
                         <em>
-                          Please enter the your email account to reset your
+                          Please enter your email account to reset your
                           password.
                         </em>
                       </div>
