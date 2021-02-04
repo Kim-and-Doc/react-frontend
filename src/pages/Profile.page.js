@@ -3,13 +3,14 @@ import CreatePost from '../components/post/CreatePost';
 import Footer from '../components/hoc/Footer';
 import Navbar from '../components/hoc/Navbar';
 import ProfileBanner from '../components/sidebar/ProfileBanner';
-import ProfileSideBar from '../components/sidebar/ProfileSideBar';
+import ProfileSideRight from '../components/sidebar/ProfileSideRight';
 import SNSPost from '../components/post/SNSPost';
 import useScript from '../utils/useScript.hook';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import PopupForm from '../components/hoc/PopupPostForm';
 import PopupProfileForm from '../components/hoc/PopupProfileForm';
+import ProfileSideLeft from '../components/sidebar/ProfileSideLeft';
 
 const Profile = ({ isOpen, isProfileOpen }) => {
   useScript(
@@ -25,7 +26,31 @@ const Profile = ({ isOpen, isProfileOpen }) => {
       <Navbar type="sns" />
       <ProfileBanner />
       <div className="divider" />
-      <ProfileSideBar />
+      <ProfileSideLeft />
+    <div class="profile-side post-comment profile-right">
+      <div class="profile-info-container bio">
+        <div class="profile-info">
+          <h3 class="header-font">About</h3>
+          <h5 class="header-font">Name:</h5>
+          <div class="about-name">
+            <div class="first-name">Sooeun</div>
+            <div class="last-name">Kim</div>
+          </div>
+          <h5 class="header-font">Email:</h5>
+          <div class="about-birth">--</div>
+          <h5 class="header-font">Birthday:</h5>
+          <div class="about-birth">February 17, 1997</div>
+          <h5 class="header-font">Favourite Food:</h5>
+          <div>Pasta</div>
+          <h5 class="header-font">City:</h5>
+          <div>Calgary</div>
+          <h5 class="header-font">Country</h5>
+          <div>Canada</div>
+        </div>
+      </div>
+    </div>
+      <ProfileSideRight />
+
       <div className="profile-container">
         <div className="profile-content">
           <div className="divider" />

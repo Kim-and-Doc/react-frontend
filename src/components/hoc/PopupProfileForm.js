@@ -54,7 +54,7 @@ const PopupProfileForm = ({ closePopup, route, buttonText, type }) => {
                         <span className="file-name-span">
                           {profileImage
                             ? profileImage.name
-                            : 'No file uploaded'}
+                            : 'No File Uploaded'}
                         </span>
                       </div>
                     </div>
@@ -75,7 +75,7 @@ const PopupProfileForm = ({ closePopup, route, buttonText, type }) => {
                         <span className="file-name-span">
                           {profileBanner
                             ? profileBanner.name
-                            : 'No file uploaded'}
+                            : 'No File Uploaded'}
                         </span>
                       </div>
                     </div>

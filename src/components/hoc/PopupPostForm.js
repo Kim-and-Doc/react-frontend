@@ -51,7 +51,7 @@ const PopupPostForm = ({ closePopup, route, buttonText, type, cName }) => {
                 />
                 <label htmlFor="file" className="popup-file-upload" />
                 <span className="file-name-span">
-                  {file ? file.name : 'No file uploaded'}
+                  {file ? file.name : 'No File Uploaded'}
                 </span>
               </div>
               <input
