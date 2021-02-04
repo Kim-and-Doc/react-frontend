@@ -21,7 +21,8 @@ const Auth = ({ alerts }) => {
       <Navbar type="sns" />
       <div className="profile-container">
         <div className="auth-container">
-          <div
+        <div className="auth-wrap">
+<div
             data-duration-in="300"
             data-duration-out="100"
             className="auth-tabs w-tabs"
@@ -29,6 +30,8 @@ const Auth = ({ alerts }) => {
             <AuthTabMenu />
             <AuthTabContent />
           </div>
+        </div>
+          
         </div>
         <div className="main-content-area-post-list">
           <Footer type="sns" />

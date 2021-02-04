@@ -1,8 +1,8 @@
 import React from 'react';
 
-const UserImgSm = ({ upperStyleClass, image }) => {
+const UserImgSm = ({ upperStyleClass, image, link }) => {
   return (
-    <div
+    <a
       className={upperStyleClass}
       style={{
         'backgroundImage': `url(${image})`,
@@ -10,7 +10,8 @@ const UserImgSm = ({ upperStyleClass, image }) => {
         'backgroundSize': 'cover',
         'backgroundRepeat': 'no-repeat',
       }}
-    ></div>
+      href={link ? link : "/404"}
+    ></a>
   );
 };
 export default UserImgSm;

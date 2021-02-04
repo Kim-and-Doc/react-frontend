@@ -3,13 +3,14 @@ import CreatePost from '../components/post/CreatePost';
 import Footer from '../components/hoc/Footer';
 import Navbar from '../components/hoc/Navbar';
 import ProfileBanner from '../components/sidebar/ProfileBanner';
-import ProfileSideBar from '../components/sidebar/ProfileSideBar';
+import ProfileSideRight from '../components/sidebar/ProfileSideRight';
 import SNSPost from '../components/post/SNSPost';
 import useScript from '../utils/useScript.hook';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import PopupForm from '../components/hoc/PopupPostForm';
 import PopupProfileForm from '../components/hoc/PopupProfileForm';
+import ProfileSideLeft from '../components/sidebar/ProfileSideLeft';
 
 const Profile = ({ isOpen, isProfileOpen }) => {
   useScript(
@@ -25,7 +26,8 @@ const Profile = ({ isOpen, isProfileOpen }) => {
       <Navbar type="sns" />
       <ProfileBanner />
       <div className="divider" />
-      <ProfileSideBar />
+      <ProfileSideLeft />
+      <ProfileSideRight />
       <div className="profile-container">
         <div className="profile-content">
           <div className="divider" />

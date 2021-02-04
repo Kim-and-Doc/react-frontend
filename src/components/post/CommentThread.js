@@ -1,5 +1,6 @@
 import React from 'react';
 import UserImgSm from '../hoc/UserImgSm';
+import CreateComment from './CreateComment';
 
 const CommentThread = ({
   children,
@@ -10,6 +11,7 @@ const CommentThread = ({
   image,
   altTxt,
   styleClass,
+  usernameLink,
 }) => {
   return (
     <div className="comment-section">
@@ -22,20 +24,25 @@ const CommentThread = ({
         />
         <div className="comment">
           <div className="comment-box">
-            <div className="comment-name header-font">{username}</div>
+            <a
+              href={usernameLink ? usernameLink : '/404'}
+              className="user-link w-inline-block"
+            >
+              <div className="comment-name header-font">{username}</div>
+            </a>
             <div className="comment-text">{commentContent}</div>
           </div>
           <div className="comment-react">
-            <a href="/404" className="like-comment">
-              Like{' '}
-            </a>
-            <a href="/404" className="reply-comment">
+            <button className="reply-comment">
               Reply{' '}
-            </a>
+            </button>
             <div className="text-block-2">{commentDate}</div>
           </div>
         </div>
       </div>
+      {/* Figure out how to display based on which reply button is pressed 
+        
+      <CreateComment /> */}
       <div className="replies">{children}</div>
     </div>
   );
