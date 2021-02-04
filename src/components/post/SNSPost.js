@@ -2,6 +2,7 @@ import React from 'react';
 import CommentThread from './CommentThread';
 import UserImgSm from '../hoc/UserImgSm';
 import PostSettings from './PostSettings';
+import CreateComment from './CreateComment';
 
 const SNSPost = () => {
   return (
@@ -15,9 +16,11 @@ const SNSPost = () => {
             styleClass="profile-image"
           />
           <div className="post-details">
-            <div className="post-name">
-              <strong className="bold-text header-font">Sooeun Kim</strong>
-            </div>
+            <a href="/404" className="user-link w-inline-block">
+              <div className="post-name">
+                <strong className="bold-text header-font">Sooeun Kim</strong>
+              </div>
+            </a>
             <div className="post-date">October 28, 2020</div>
           </div>
           <PostSettings />
@@ -34,11 +37,12 @@ const SNSPost = () => {
           <br />
           This‍
         </div>
-        <div className="post-media" style={{
-        'backgroundImage': `url(${
-          "https://images7.alphacoders.com/465/thumb-1920-465099.jpg"
-          })`,
-      }} />
+        <div
+          className="post-media"
+          style={{
+            backgroundImage: `url(${'https://images7.alphacoders.com/465/thumb-1920-465099.jpg'})`,
+          }}
+        />
         <div className="post-count">
           <div className="like-count">Likes 69</div>
           <div className="count-spacer"> </div>
@@ -46,21 +50,21 @@ const SNSPost = () => {
         </div>
         <div className="hr"></div>
         <div className="post-react">
-          <a href="/404" className="clear-button post-interaction w-button">
+          <button className="clear-button post-interaction w-button">
             <i className="fas fa-thumbs-up" />
             <br />
             Like
-          </a>
-          <a href="/404" className="clear-button post-interaction w-button">
+          </button>
+          <button className="clear-button post-interaction w-button">
             <i className="fas fa-comment" />
             <br />
             Comment
-          </a>
-          <a href="/404" className="clear-button post-interaction w-button">
+          </button>
+          <button className="clear-button post-interaction w-button">
             <i className="fas fa-share" />
             <br />
             Share
-          </a>
+          </button>
         </div>
         <div className="hr"></div>
         <CommentThread
@@ -100,30 +104,7 @@ const SNSPost = () => {
             ></CommentThread>
           </CommentThread>
         </CommentThread>
-        <div className="picture-post create-comment">
-          <UserImgSm
-            upperStyleClass="profile-img-div profile-small"
-            image="https://m.media-amazon.com/images/M/MV5BMWRkMjMxMjEtZTZiYi00OTIwLWFhNmMtOWFiZTU1NDc3OGJlXkEyXkFqcGdeQXVyMjIyNzU0OA@@._V1_.jpg"
-            altTxt="User Icon"
-            styleClass="profile-image"
-          />
-          <form action="/search" className="text-input post-input w-form">
-            <input
-              type="search"
-              className="search-input nav-search comment-field w-input"
-              maxLength="256"
-              name="query"
-              placeholder="Write a comment..."
-              id="search"
-              required=""
-            />
-            <input
-              type="submit"
-              value="Search"
-              className="input-submit w-button"
-            />
-          </form>
-        </div>
+        <CreateComment />
       </div>
     </div>
   );

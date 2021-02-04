@@ -24,7 +24,7 @@ const Home = ({ isOpen }) => {
       <Navbar type="sns" />
       <HomeSideLeft />
       <HomeSideRight />
-      <div className="profile-container">
+      <div className="profile-container home-container">
         <div className="profile-content">
           <div className="divider" />
           <CreatePost />
