@@ -14,11 +14,6 @@ const AuthTabMenu = () => {
         cName="auth-tab-link w-inline-block w-tab-link"
         content="Register"
       />
-      <AuthTab
-        tab="Tab 3"
-        cName="auth-tab-link w-inline-block w-tab-link"
-        content="Forgot Password"
-      />
     </div>
   );
 };

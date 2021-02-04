@@ -9,30 +9,36 @@ const AuthTabContent = () => {
       >
         <section id="contact-form" className="auth-section">
           <div className="auth-form-container w-container">
-            <h2 className="auth-header">Login</h2>
             <div className="auth-form-block">
-              <form className="auth-form">
-                <div className="auth-form-grid">
-                  <div id="w-node-4698c9b49880-97f8b18f">
-                    <label htmlFor="email">Email</label>
-                    <input
-                      type="email"
-                      className="auth-text-field w-input"
-                      maxLength="256"
-                      name="email"
-                      required
-                      autoFocus
-                    />
-                  </div>
-                  <div id="w-node-4698c9b49884-97f8b18f">
-                    <label htmlFor="password">Password</label>
-                    <input
-                      type="password"
-                      className="auth-text-field w-input"
-                      maxLength="256"
-                      name="password"
-                    />
-                  </div>
+              <form
+                id="wf-form-Contact-Form"
+                name="wf-form-Contact-Form"
+                data-name="Contact Form"
+                className="auth-form"
+              >
+                <div className="auth-input-wrap">
+                  <label htmlFor="email" id="contact-email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="auth-text-field w-input"
+                    autoFocus="true"
+                    maxLength="256"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div className="auth-input-wrap">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    className="auth-text-field w-input"
+                    autoFocus="true"
+                    maxLength="256"
+                    name="password"
+                    required
+                  />
                 </div>
                 <input
                   type="submit"
@@ -41,93 +47,84 @@ const AuthTabContent = () => {
                 />
               </form>
             </div>
+            <a href="/forgot" className="forgot-link">
+              Forgot Password?
+            </a>
           </div>
         </section>
       </div>
       <div data-w-tab="Tab 2" className="auth-tab-pane w-tab-pane">
         <section id="contact-form" className="auth-section">
           <div className="auth-form-container w-container">
-            <h2 className="auth-header">Register</h2>
-            <div className="auth-form-block">
-              <form className="auth-form">
-                <div className="auth-form-grid">
-                  <div id="w-node-ac0152192192-97f8b18f">
-                    <label htmlFor="firstName">First name</label>
+            <div className="auth-form-block reg-block">
+              <form
+                id="wf-form-Contact-Form"
+                name="wf-form-Contact-Form"
+                data-name="Contact Form"
+                className="auth-form"
+              >
+                <div className="auth-input-wrap-flex">
+                  <div className="auth-input-wrap">
+                    <label htmlFor="firstName">First Name</label>
                     <input
                       type="text"
                       className="auth-text-field w-input"
+                      autoFocus="true"
                       maxLength="256"
                       name="firstName"
+                      placeholder="John"
                       required
                     />
                   </div>
-                  <div id="w-node-ac0152192196-97f8b18f">
-                    <label htmlFor="lastName">Last name</label>
+                  <div className="auth-input-wrap">
+                    <label htmlFor="lastName">Last Name</label>
                     <input
                       type="text"
                       className="auth-text-field w-input"
+                      autoFocus="true"
                       maxLength="256"
                       name="lastName"
-                      required
-                    />
-                  </div>
-                  <div id="w-node-ac015219219a-97f8b18f">
-                    <label htmlFor="email">Email</label>
-                    <input
-                      type="email"
-                      className="auth-text-field w-input"
-                      maxLength="256"
-                      name="email"
-                      required
-                    />
-                  </div>
-                  <div id="w-node-ac015219219e-97f8b18f">
-                    <label htmlFor="password">Password</label>
-                    <input
-                      type="password"
-                      className="auth-text-field w-input"
-                      maxLength="256"
-                      name="password"
-                    />
-                  </div>
-                </div>
-                <input
-                  type="submit"
-                  value="Register"
-                  className="profile-side-btn w-button"
-                />
-              </form>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div data-w-tab="Tab 3" className="auth-tab-pane w-tab-pane">
-        <section id="contact-form" className="auth-section">
-          <div className="auth-form-container w-container">
-            <h2 className="auth-header">Forgot Password</h2>
-            <div id="formInstructions" className="auth-text">
-              <em>
-                Please enter the your email account to reset your password.
-              </em>
-            </div>
-            <div className="auth-form-block">
-              <form className="auth-form">
-                <div className="auth-form-grid">
-                  <div id="w-node-970e0dec08ba-97f8b18f">
-                    <label htmlFor="email">Email</label>
-                    <input
-                      type="email"
-                      className="auth-text-field w-input"
-                      autoFocus
-                      maxLength="256"
-                      name="email"
+                      placeholder="Doe"
                       required
                     />
                   </div>
                 </div>
+                <div className="auth-input-wrap">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    className="auth-text-field w-input"
+                    maxLength="256"
+                    name="email"
+                    placeholder="jdoe@gmail.com"
+                    required
+                  />
+                </div>
+                <div className="auth-input-wrap">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    className="auth-text-field w-input"
+                    autoFocus="true"
+                    maxLength="256"
+                    name="password"
+                    required
+                  />
+                </div>
+                <div className="auth-input-wrap">
+                  <label htmlFor="confirmPass">Confirm Password</label>
+                  <input
+                    type="password"
+                    className="auth-text-field w-input"
+                    autoFocus="true"
+                    maxLength="256"
+                    name="confirmPass"
+                    required
+                  />
+                </div>
                 <input
                   type="submit"
-                  value="Reset"
+                  value="Login"
                   className="profile-side-btn w-button"
                 />
               </form>
