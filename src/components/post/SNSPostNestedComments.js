@@ -4,8 +4,8 @@ import UserImgSm from '../hoc/UserImgSm';
 import PostSettings from './PostSettings';
 import CreateComment from './CreateComment';
 
-const SNSPost = ({ postId, image, likes, owner, publishDate, text }) => {
-  const { id, firstName, lastName, picture } = owner;
+const SNSPost = ({postId, image, likes, owner, publishDate,text}) => {
+  const {id,firstName, lastName,picture} = owner;
   // make a link for comments in our api
 
   return (
@@ -29,7 +29,9 @@ const SNSPost = ({ postId, image, likes, owner, publishDate, text }) => {
           <PostSettings />
         </div>
         <div className="hr"></div>
-        <div className="post-text">{text}</div>
+        <div className="post-text">
+          {text}
+        </div>
         <div
           className="post-media"
           style={{
